@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>クイズ練習（複数）</title>
+</head>
+<body>
+
+<header>
+    <h1 id="tytle">クイズ練習（複数）</h1>
+    <h1 id="num"></h1>
+</header>
+
+<main>
+  <p id="quest">ここに問題が出題されます</p>
+  <p>
+    <input type="radio" name="toi" value="1"><span id="toi1">選択肢１</span>
+    <input type="radio" name="toi" value="2"><span id="toi2">選択肢２</span>
+    <input type="radio" name="toi" value="3"><span id="toi3">選択肢３</span>
+  </p>
+</main>
+
+<footer>フッター</footer>
+<script>
+  let n = 1;
+  $("#num").text(n);
+  let t = 0;
+//ここから記述領域［START］
+
+  //以下に配列を記述してください。
+  //問題文[配列]
+  const qs =[
+  "通るときには閉まって、通らないときには開いているものは何？",
+  "話すことがとても好きな道具は何？",
+  "世界の真ん中にいる虫は何？",
+  "誰でも目が二重になるのは何月何日？",
+  "水金〇火木土 〇に入る漢字は？",
+  "「止」「一」「月」これはいつ？"
+  ];
+    
+  //回答選択肢[多重配列]
+  const toi = [
+  ["踏み切り","洗濯機","冷蔵庫"],
+  ["スプーン","シャベル","しゃもじ"],
+  ["てんとう虫","カマキリ","蚊"],
+  ["１月８日","２月１０日","３月１２日"],
+  ["月","日","地"],
+  ["正月","十五夜","君の誕生日"]
+  ];
+    
+  //答え[配列]
+  const ans = [1, 2, 3, 2, 3, 1];
+
+  //1.最初の問題文＆回答選択肢＆回答値を設定
+  let i =0;
+  $("#quest").text(qs[i]);
+  $("#toi1").text(toi[i][0]);
+  $("#toi2").text(toi[i][1]);
+  $("#toi3").text(toi[i][2]);
+  $("#toi4").text(toi[i][1]);
+  $("#toi5").text(toi[i][2]);
+  $("#toi6").text(toi[i][0]);
+
+  //2.ラジオボタンをクリックしたらイベント発生！(クリックイベント)
+  $("[name=toi]").on("click" ,function(){
+    const v =$(this).val();
+    if(ans[i] == v){
+        $("#tytle").text("正解！");
+        t++;
+    }else{
+      $("#tytle").text("残念！");
+    }
+    if(i <= 4){
+     i++;//配列に入れるiが1プラスされる。
+     n++; 
+    }else{
+      i = 0;
+      n = 1;
+      alert("おしまい"+t+"問正解したよ");
+    }
+      $("#num").text(n);
+    $("#quest").text(qs[i]);
+    $("#toi1").text(toi[i][0]);
+    $("#toi2").text(toi[i][1]);
+    $("#toi3").text(toi[i][2]);
+    $("#toi4").text(toi[i][1]);
+    $("#toi5").text(toi[i][2]);
+    $("#toi6").text(toi[i][0]);
+    });
+ 
+
+
+
+
+
+//ここまでが記述領域［END］
+</script>
+</body>
+</html>
