@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 5px;
+    border-bottom: 4px solid orchid;
+}
+h2{
+    text-align: center;
+}
+#col{
+    width: 70px;
+    height: 70px;
+}
+#size{
+    margin-left: 40px;
+    width: 400px;
+}
+#op{
+    text-align: center;
+}
+#cv{
+    text-align: center;
+}
+nav{
+    text-align: center;
+    margin-bottom: 40px;
+}
+footer{
+    border-bottom: 4px solid orchid;
+}
