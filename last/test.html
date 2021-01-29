@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header>
+        <h1>キャラ占い</h1>
+    </header>
+
+    <main>
+        <p id="quest">ここに問題が出題されます</p>
+        <p>
+            <input type="radio" name="toi" value="1"><span id="toi1">選択肢１</span>
+            <input type="radio" name="toi" value="2"><span id="toi2">選択肢２</span>
+          </p>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script>
+          let n = 1;
+            $("#num").text(n);
+            let t = 0;
+
+        const qs =[           
+            "わたしは一人でいるのがすき。",
+            "自分の部屋を他人に入れるのが嫌い",
+            "私は鼻がとてもいい",
+            "私は人の言うことはちゃんと聞くほうだ。",
+            "水金〇火木土 〇に入る漢字は？",
+            "「止」「一」「月」これはいつ？"
+        ];
+        const toi =[
+            ["はい","いいえ"],
+            ["はい","いいえ"],
+            ["はい","いいえ"],
+            ["はい","いいえ"],
+            ["月","日"],
+            ["正月","十五夜"]
+        ];
+
+        const ans = [2, 2, 1, 1, 2, 1];
+
+  let i=0;
+  $("#quest").text(qs[i]);
+  $("#toi1").text(toi[i][0]);
+  $("#toi2").text(toi[i][1]);
+  $("#toi3").text(toi[i][0]);
+  $("#toi4").text(toi[i][1]);
+  $("#toi5").text(toi[i][1]);
+  $("#toi6").text(toi[i][0]);
+  $("[name=toi]").on("click" ,function(){
+    const v =$(this).val();
+    if(ans[i]==v){
+      t++;
+    }else{
+      $("#tytle").text("残念！");
+    }
+    if(i <= 4){
+     i++;//配列に入れるiが1プラスされる。
+     n++; 
+    }else{
+      i = 0;
+      n = 1;
+      alert("おしまい"+t+"問正解したよ");
+    }
+    $("#quest").text(qs[i]);
+    $("#toi1").text(toi[i][0]);
+    $("#toi2").text(toi[i][1]);
+    $("#toi3").text(toi[i][0]);
+    $("#toi4").text(toi[i][1]);
+    $("#toi5").text(toi[i][1]);
+    $("#toi6").text(toi[i][0]);
+    if(t == 0 && n==5){
+      window.location.href = 'aaa.html';
+    } 
+    if(t == 1 && n==5){
+      window.location.href = 'bbb.html';
+    }
+    if(t == 2 && n == 5){
+      window.location.href = 'ccc.html';
+    }
+    if(t == 3 && n == 5){
+      window.location.href = 'ddd.html';
+    }
+    if(t == 4 && n == 5){
+      window.location.href = 'eee.html';
+    }
+    });
+   
+    </script>
+</body>
+</html>

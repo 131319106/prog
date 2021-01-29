@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 32px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  header {
+    background-color: rgb(255, 198, 250);
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    color: rgb(7, 7, 7);
+  }
+  
+  main {
+    border-bottom: 1px solid #ccc;
+  }
+  h2{
+    font-size:16px;
+  }
+  footer {
+    background-color: rgb(255, 198, 250);
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    color: #fff;
+  }
+  
+  p {
+    font-size: 100%;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    height: 100px;
+  }
+  
+  ul {
+    padding: 0;
+    border-top: 1px solid #000000;
+    display: table;
+    /* 定義 */
+    table-layout: fixed;
+    width: 100%;
+  }
+  
+  li {
+    text-align: center;
+    list-style-type: none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display: table-cell;
+    /* 定義 */
+    cursor: pointer;
+  }
+  
+  li:hover {
+    background: #53a9ff;
+    color: #fff;
+  }
+  textarea{
+    margin: 3%;
+    width: 30%;
+    height: 30px;
+    font-size:50%;
+    box-shadow: 3px 3px 3px 3px #555;
+  }
+  
+  h1{
+    font-size: 50px;
+  }
+
+  button{
+    margin-left:  45%;
+    margin-bottom: 10%;
+    width:200px;
+    height: 30px;
+    
+  }
+
+  #intro{
+    background-color: rgb(255, 198, 250);
+    font-size: 40px;
+    margin-top: 0%;
+  }
+  #d1{
+    padding-left: 5%;
+    padding-right: 25%;
+    width:250px;
+  }
+
+  #c1{
+    width:250px;
+  }
+
+  #kekka{
+    background-color: rgb(255, 198, 250);
+    margin-top: 0%; 
+    font-size: 50px;
+  }
+  #ri{
+    margin-top: 350px;
+  }
